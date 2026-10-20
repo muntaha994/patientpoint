@@ -1,0 +1,25 @@
+<h1>Patients</h1>
+
+<%= link_to "Add New Patient", new_patient_path %>
+
+<hr>
+
+<% @patients.each do |patient| %>
+
+<p>
+Name: <%= patient.name %><br>
+Address: <%= patient.address %><br>
+Location: <%= patient.location %>
+</p>
+
+<%= link_to "Show", patient_path(patient) %>
+
+<%= link_to "Edit", edit_patient_path(patient) %>
+
+<%= button_to "Delete", patient_path(patient),
+      method: :delete,
+      data: { turbo_confirm: "Are you sure?" } %>
+
+<hr>
+
+<% end %>

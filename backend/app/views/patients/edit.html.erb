@@ -1,0 +1,22 @@
+<h1>Edit Patient</h1>
+
+<%= form_with model: @patient do |f| %>
+
+<p>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+</p>
+
+<p>
+<%= f.label :address %><br>
+<%= f.text_field :address %>
+</p>
+
+<p>
+<%= f.label :location %><br>
+<%= f.text_field :location %>
+</p>
+
+<%= f.submit "Update Patient" %>
+
+<% end %>
